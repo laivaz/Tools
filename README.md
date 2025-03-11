@@ -7,14 +7,17 @@ usage: python3 brute_pem_key.py [-h] -p PEM -w WORDLIST [-t THREADS]
 for example:
 python3 brute_pem_key.py -p private.key -w ~/tools/wordlists/SecLists/Passwords/xato-net-10-million-passwords-100000.txt
 
+
 python3 brute_pem_key.py -p private.key -w ~/tools/wordlists/SecLists/Passwords/xato-net-10-million-passwords-100000.txt -t 6
 [+] Attempting to brute-force private.key with 100000 passwords using 6 threads...
-Progress:   1%|▊                                                                       | 1145/100000
+
+
+Progress:   1%|▊        | 1145/100000
 [+] Password found: secret
 
 
 Problems?
-1) test Key format 
+1) Test Key format: 
 You should be able to dump the ASN.1 content directly from the PEM format using openssl asn1parse
 
 % openssl asn1parse -inform pem -in private.key            
